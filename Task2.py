@@ -2,7 +2,6 @@
 
 import os
 import random
-import math
 os.system('cls')
 
 def simple_mult(n):
