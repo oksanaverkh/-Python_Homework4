@@ -24,19 +24,19 @@ def check():
 
 def main():
     k = check()    
-    my_list = list_creation(k, 100)
+    coef_list = list_creation(k, 100)
     with open('polynomial.txt', 'w') as data:
         for i in range(k+1):
-            if my_list[i]==0:
+            if coef_list[i]==0:
                 continue
-            elif my_list[i]==1:
+            elif coef_list[i]==1:
                 data.write(f' x^{k-i} +')
             elif (k-i)==1:
-                data.write(f' {my_list[i]*1}x +')
+                data.write(f' {coef_list[i]*1}x +')
             elif (k-i)==0:
-                data.write(f' {my_list[i]*1}')
+                data.write(f' {coef_list[i]*1}')
             else:
-                data.write(f' {my_list[i]}x^{k-i} +')
+                data.write(f' {coef_list[i]}x^{k-i} +')
         data.write(' = 0')
 
 if __name__ == "__main__":
