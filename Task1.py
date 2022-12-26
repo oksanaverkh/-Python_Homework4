@@ -16,7 +16,8 @@ def check():
 
 def main():    
     accuracy = check()
-    print(f'd = {10**(-accuracy)}')
+    d = 10**(-accuracy)
+    print(f'd = %.{accuracy}f'%d)
     print(f'10 / 3 = {round(10/3,accuracy)}')
 
 
